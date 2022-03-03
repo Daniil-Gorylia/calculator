@@ -26,6 +26,6 @@ if counter.is_integer() == True:
 else:
     print(float(counter))
 
-print(operations.a[int(counter)])
+print(operations.word[int(counter)])
 
 
