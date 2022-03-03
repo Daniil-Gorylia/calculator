@@ -21,11 +21,14 @@ elif my_operators == 'div':
     counter = number_1 // number_2
 
 
-if counter.is_integer() == True:
+if counter.is_integer():
     print(int(counter))
 else:
     print(float(counter))
 
-print(operations.word[int(counter)])
+if counter < 0:
+    print('минус ' + operations.word[int(counter * -1)])
+else:
+    print(operations.word[int(counter)])
 
 
