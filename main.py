@@ -24,6 +24,8 @@ elif my_operators == 'div':
 if counter.is_integer() == True:
     print(int(counter))
 else:
-    print(counter)
+    print(float(counter))
+
+print(operations.a[int(counter)])
 
 
