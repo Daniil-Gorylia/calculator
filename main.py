@@ -27,8 +27,8 @@ else:
     print(float(counter))
 
 if counter < 0:
-    print('минус ' + operations.word[int(counter * -1)])
+    print('минус ' + operations.number_to_words(int(counter * -1)))
 else:
-    print(operations.word[int(counter)])
+    print(operations.number_to_words(int(counter)))
 
 
