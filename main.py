@@ -1,5 +1,5 @@
 import operations
-
+from math import *
 number_1 = float(input('Введите любое первое число'))
 my_operators = input('Введите оператор (+, -, /, *, mod, pow, div)')
 number_2 = float(input('Введите любое второе число'))
@@ -28,4 +28,5 @@ if counter.is_integer():
     else:
         print(operations.number_to_words(int(counter)))
 else:
-    print(float(counter))
+    a = round(counter, 1)
+    print(a)
