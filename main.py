@@ -23,12 +23,9 @@ elif my_operators == 'div':
 
 if counter.is_integer():
     print(int(counter))
+    if counter < 0:
+        print('минус ' + operations.number_to_words(int(counter * -1)))
+    else:
+        print(operations.number_to_words(int(counter)))
 else:
     print(float(counter))
-
-if counter < 0:
-    print('минус ' + operations.number_to_words(int(counter * -1)))
-else:
-    print(operations.number_to_words(int(counter)))
-
-
