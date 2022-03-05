@@ -34,16 +34,87 @@ def float_number_to_words(n):
         return number2[int(d)] + ' целых ' + float_numbers[float_number2]
     elif 20.0 < n < 100.0:
         return number2[int(d)] + ' ' + number1[int(n1)] + ' целых ' + float_numbers[float_number2]
-
     elif 100.0 <= n < 1000.0 and number2[int(d1)] not in number2 and n1 ==0 and number4[int(d1)] in number4:
         return number4[int(d1)] + ' целых ' + float_numbers[float_number2]
     elif 100.0 < n < 110.0:
         return number4[int(d1)] + ' ' + number1[int(n1)] + ' целых ' + float_numbers[float_number2]
-    elif 110.0 < n < 200.0 and number2[int(d1)] not in number2:
+    elif 110.0 < n < 200.0 and n3 < 20:
         return number4[int(d1)] + ' ' + number3[int(int_number) - 110] + ' целых ' + float_numbers[float_number2]
     elif 110.0 <= n < 200.0 and n1 == 0 and number4[int(d1)] in number4:
         return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' целых ' + float_numbers[float_number2]
     elif 120.0 < n < 200.0:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' ' + number1[int(n1)] + ' целых ' \
+               + float_numbers[float_number2]
+    elif 200.0 < n < 210.0:
+        return number4[int(d1)] + ' ' + number1[int(n1)] + ' целых ' + float_numbers[float_number2]
+    elif 210.0 < n < 300.0 and n3 < 20:
+        return number4[int(d1)] + ' ' + number3[int(int_number) - 210] + ' целых ' + float_numbers[float_number2]
+    elif 210.0 <= n < 300.0 and n1 == 0 and number4[int(d1)] in number4:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' целых ' + float_numbers[float_number2]
+    elif 220.0 < n < 300.0:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' ' + number1[int(n1)] + ' целых ' \
+               + float_numbers[float_number2]
+    elif 300.0 < n < 310.0:
+        return number4[int(d1)] + ' ' + number1[int(n1)] + ' целых ' + float_numbers[float_number2]
+    elif 310.0 < n < 400.0 and n3 < 20:
+        return number4[int(d1)] + ' ' + number3[int(int_number) - 310] + ' целых ' + float_numbers[float_number2]
+    elif 310.0 <= n < 400.0 and n1 == 0 and number4[int(d1)] in number4:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' целых ' + float_numbers[float_number2]
+    elif 320.0 < n < 400.0:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' ' + number1[int(n1)] + ' целых ' \
+               + float_numbers[float_number2]
+    elif 400.0 < n < 410.0:
+        return number4[int(d1)] + ' ' + number1[int(n1)] + ' целых ' + float_numbers[float_number2]
+    elif 410.0 < n < 500.0 and n3 < 20:
+        return number4[int(d1)] + ' ' + number3[int(int_number) - 410] + ' целых ' + float_numbers[float_number2]
+    elif 410.0 <= n < 500.0 and n1 == 0 and number4[int(d1)] in number4:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' целых ' + float_numbers[float_number2]
+    elif 420.0 < n < 500.0:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' ' + number1[int(n1)] + ' целых ' \
+               + float_numbers[float_number2]
+    elif 500.0 < n < 510.0:
+        return number4[int(d1)] + ' ' + number1[int(n1)] + ' целых ' + float_numbers[float_number2]
+    elif 510.0 < n < 600.0 and n3 < 20:
+        return number4[int(d1)] + ' ' + number3[int(int_number) - 510] + ' целых ' + float_numbers[float_number2]
+    elif 510.0 <= n < 600.0 and n1 == 0 and number4[int(d1)] in number4:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' целых ' + float_numbers[float_number2]
+    elif 520.0 < n < 600.0:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' ' + number1[int(n1)] + ' целых ' \
+               + float_numbers[float_number2]
+    elif 600.0 < n < 610.0:
+        return number4[int(d1)] + ' ' + number1[int(n1)] + ' целых ' + float_numbers[float_number2]
+    elif 610.0 < n < 700.0 and n3 < 20:
+        return number4[int(d1)] + ' ' + number3[int(int_number) - 710] + ' целых ' + float_numbers[float_number2]
+    elif 610.0 <= n < 700.0 and n1 == 0 and number4[int(d1)] in number4:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' целых ' + float_numbers[float_number2]
+    elif 620.0 < n < 700.0:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' ' + number1[int(n1)] + ' целых ' \
+               + float_numbers[float_number2]
+    elif 700.0 < n < 710.0:
+        return number4[int(d1)] + ' ' + number1[int(n1)] + ' целых ' + float_numbers[float_number2]
+    elif 710.0 < n < 800.0 and n3 < 20:
+        return number4[int(d1)] + ' ' + number3[int(int_number) - 710] + ' целых ' + float_numbers[float_number2]
+    elif 710.0 <= n < 800.0 and n1 == 0 and number4[int(d1)] in number4:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' целых ' + float_numbers[float_number2]
+    elif 720.0 < n < 800.0:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' ' + number1[int(n1)] + ' целых ' \
+               + float_numbers[float_number2]
+    elif 800.0 < n < 810.0:
+        return number4[int(d1)] + ' ' + number1[int(n1)] + ' целых ' + float_numbers[float_number2]
+    elif 810.0 < n < 900.0 and n3 < 20:
+        return number4[int(d1)] + ' ' + number3[int(int_number) - 810] + ' целых ' + float_numbers[float_number2]
+    elif 810.0 <= n < 900.0 and n1 == 0 and number4[int(d1)] in number4:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' целых ' + float_numbers[float_number2]
+    elif 820.0 < n < 900.0:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' ' + number1[int(n1)] + ' целых ' \
+               + float_numbers[float_number2]
+    elif 900.0 < n < 910.0:
+        return number4[int(d1)] + ' ' + number1[int(n1)] + ' целых ' + float_numbers[float_number2]
+    elif 910.0 < n < 1000.0 and n3 < 20:
+        return number4[int(d1)] + ' ' + number3[int(int_number) - 910] + ' целых ' + float_numbers[float_number2]
+    elif 910.0 <= n < 1000.0 and n1 == 0 and number4[int(d1)] in number4:
+        return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' целых ' + float_numbers[float_number2]
+    elif 920.0 < n < 1000.0:
         return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' ' + number1[int(n1)] + ' целых ' \
                + float_numbers[float_number2]
 
