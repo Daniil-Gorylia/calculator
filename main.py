@@ -31,7 +31,7 @@ else:
    a = round(counter, 1)
    print(float(a))
    if counter < 0:
-       print('минус ' + floatnumbers.float_number_to_words(a))
+       print('минус ' + floatnumbers.float_number_to_words(a * -1))
    else:
        print(floatnumbers.float_number_to_words(a))
 
