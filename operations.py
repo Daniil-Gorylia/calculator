@@ -1,3 +1,6 @@
+# Здесь содержится информация о прописных числах, но только целых, принцип действия тот же как и в floatnumbers,
+# по существу функционал их заключается только в выводе текста, и открывать данные файлы не имеет значения
+
 def number_to_words(n):
     number1 = ('ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять')
     number2 = (None, 'десять', 'двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят',
@@ -97,7 +100,7 @@ def number_to_words(n):
         return number4[int(d1)] + ' ' + number2[int(n3 / 10)]
     elif 920 < n < 1000:
         return number4[int(d1)] + ' ' + number2[int(n3 / 10)] + ' ' + number1[n1]
-    elif n >= 1000 and d2.is_integer() and number5[int(d2)] in number5:
+    elif 1000 <= n < 10000 and d2.is_integer() and number5[int(d2)] in number5:
         return number5[int(d2)]
     elif 1000 < n < 1010:
         return number5[int(d2)] + ' ' + number1[n1]
@@ -837,3 +840,5 @@ def number_to_words(n):
         return number5[int(d2)] + ' ' + number4[int(n4 / 100)] + ' ' + number2[int(n3 / 10)] + ' ' + number1[n1]
     elif 9099 < n < 10000:
         return number5[int(d2)] + ' ' + number4[int(n4 / 100)]
+    else:
+        print('Извините, но калькулятор пока что не может вывести текстом запрашиваемый результат')
