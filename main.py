@@ -3,7 +3,7 @@
 import floatnumbers
 import operations
 
-counter_for_while = 1
+counter_for_while = 0
 print('Этот калькулятор версии 1.5 выводит целые и вещественные цифры текстом, при этом он ограничен в выводе'
            '\n до 9999 и 9999.9, он может слаживать (+), отнимать (-), делить (/), умножать (*).\n А так же производить'
           ' взятие остатка от деления (mod), возведение в степень (pow), и целочисленное деление (div).\nКалькулятор'
@@ -86,5 +86,6 @@ while True:
        else:
            print(floatnumbers.float_number_to_words(a))
 
-    print(f'Количество выполненных операций:{counter_for_while}')
     counter_for_while += 1
+    print(f'Количество выполненных операций:{counter_for_while}')
+
