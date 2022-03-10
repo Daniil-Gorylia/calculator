@@ -63,3 +63,4 @@ def number_to_words(n):
             return number5[int(d2)] + ' ' + number4[int(n4 / 100)] + ' ' + number1[n1]
     else:
         print('Извините, но калькулятор пока что не может вывести текстом запрашиваемый результат')
+

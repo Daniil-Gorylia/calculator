@@ -3,20 +3,39 @@
 import floatnumbers
 import operations
 
+counter_for_while = 1
+print('Этот калькулятор версии 1.5 выводит целые и вещественные цифры текстом, при этом он ограничен в выводе'
+           '\n до 9999 и 9999.9, он может слаживать (+), отнимать (-), делить (/), умножать (*).\n А так же производить'
+          ' взятие остатка от деления (mod), возведение в степень (pow), и целочисленное деление (div).\nКалькулятор'
+          ' работает бесконечно и считает количество проводимых операций, для того чтобы остановить работу '
+          '\n введите на любом этапе вычисления слово (stop)')
+
 while True:
+
+
     a = input('Введите любое первое число')
     if a == 'stop':
+        print(f'Количество выполненных операций:{counter_for_while}')
         break
     else:
-        number_1 = float(a)
+        try:
+            number_1 = float(a)
+        except ValueError:
+            print("Недопустимое значение, введите цифру с точкой или 'stop'")
+            continue
     my_operators = input('Введите оператор (+, -, /, *, mod, pow, div)')
     if my_operators == 'stop':
+        print(f'Количество выполненных операций:{counter_for_while}')
         break
     b = input('Введите любое второе число')
     if b == 'stop':
         break
     else:
-        number_2 = float(b)
+        try:
+            number_2 = float(b)
+        except ValueError:
+            print("Недопустимое значение, введите цифру с точкой или 'stop'")
+            continue
     counter = 0
 
     if my_operators == '+':
@@ -24,15 +43,30 @@ while True:
     elif my_operators == '-':
         counter = number_1 - number_2
     elif my_operators == '/':
-        counter = number_1 / number_2
+        try:
+            counter = number_1 / number_2
+        except ZeroDivisionError:
+            print('Деление на ноль')
+            continue
     elif my_operators == '*':
         counter = number_1 * number_2
     elif my_operators == 'mod':
-        counter = number_1 % number_2
+        try:
+            counter = number_1 % number_2
+        except ZeroDivisionError:
+            print('Взятие нулевого остатка от деления')
+            continue
     elif my_operators == 'pow':
         counter = pow(number_1, number_2)
     elif my_operators == 'div':
-        counter = number_1 // number_2
+        try:
+            counter = number_1 // number_2
+        except ZeroDivisionError:
+            print('Целочисленное деление на ноль')
+            continue
+    else:
+        print('Вы ввели неверный оператор, повторите попытку')
+        continue
 
     # Здесь происходит определение класса числа, для дальнейшего вывода текстом, если число является целым,
     # то выводится либо целое положительное, либо целое отрицательное число в зависимости от результата
@@ -52,3 +86,5 @@ while True:
        else:
            print(floatnumbers.float_number_to_words(a))
 
+    print(f'Количество выполненных операций:{counter_for_while}')
+    counter_for_while += 1
