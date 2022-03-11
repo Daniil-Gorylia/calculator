@@ -29,6 +29,7 @@ while True:
         break
     b = input('Введите любое второе число')
     if b == 'stop':
+        print(f'Количество выполненных операций:{counter_for_while}')
         break
     else:
         try:
